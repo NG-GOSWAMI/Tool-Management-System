@@ -1,0 +1,16 @@
+Create Table Codes
+
+create table student(student_id varchar(10) primary key, name varchar(25), phone_no varchar(15), course varchar(10), branch varchar(10), year varchar(10), semester varchar(10));
+
+
+create table account(username varchar(20) primary key, name varchar(25), password varchar(25), sec_q varchar(25), sec_ans varchar(25));
+
+
+
+create table Tool(tool_id varchar(10) primary key, name varchar(40), isi varchar(20), seller varchar(30),  price varchar(10));
+
+
+create table issueTool(tool_id varchar(10) primary key, student_id varchar(10) not null, tname varchar(40) not null, sname varchar(40) not null, course varchar(20) not null, branch varchar(30) not null, dateOfIssue date not null);
+
+
+create table returnTool(tool_id varchar(10) primary key, student_id varchar(10) not null, tname varchar(40) not null, sname varchar(40) not null,course varchar(20) not null, branch varchar(10) not null, dateOfIssue date not null, dateOfReturn date not null);
